@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+@media only screen and (max-width: 1024px) {
+    .img{
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin: auto;
+        width: 40%;
+    }
+    .emoji{
+        min-height:100vh;
+        font-size: 80px;
+        justify-content:center;
+        align-items:center;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .img{
+        width: 55%;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+      background: #171717;
+    }
+    .img{
+        filter: invert(100%) sepia(4%) saturate(358%) hue-rotate(283deg) brightness(112%) contrast(92%);;
+    }
+  }
+
+.zoom{
+  transform:scale(0.7);
+  transition: all 500ms linear;
+}
+
+.move_up{
+    min-height:70vh;
+    transition: all 500ms horizontal;
+}
+
+.container {
+    height: 0vh;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+.container p {
+  font-size: 2rem;
+  font-weight: lighter;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+  color: whitesmoke;
+}
+.container .text span.typed-text {
+    font-weight: normal;
+    color: #dd7732;
+}
+.container .text span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container .text span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+.hidden{
+    display: none;
+}

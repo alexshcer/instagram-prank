@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta data-n-head="ssr" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1">
+	<meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
+	<title>Zoom</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-3.6.0.js"></script>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	/* Add "https://api.ipify.org?format=json" statement
+			   this will communicate with the ipify servers in
+			   order to retrieve the IP address $.getJSON will
+			   load JSON-encoded data from the server using a
+			   GET HTTP request */
+	$.getJSON("https://api.ipify.org?format=json", function (data) {
+
+		// Setting text of element P with id gfg
+		$("#gfg").html(data.ip);
+	})
+
+	$(window).on('load resize', function () {
+		if ($(window).width() > 1024) {
+			var x = document.getElementsByTagName("BODY")[0];
+			x.style.backgroundColor = "#221f1f";
+
+			window.location = "https://www.google.com"
+
+			document.querySelector(".img").style.display = "none";
+			document.querySelector(".emoji").style.display = "none";
+		}
+	});
+</script>
+
+<body>
+	<img id="image" src="image.svg" class="img"></img>
+	<p id="emoji" class="emoji"></p>
+	<script src="script.js"></script>
+	<div id="text" class="container hidden">
+		<p class="text">Happy New Year</p>
+		<p class="text">btw, thanks for your IP</p>
+		<p class="text" id="gfg"></p>
+	</div>
+	<!--<div id="text" class="container hidden">
+		<p class="text">as<span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+	</div>-->
+</body>
+
+</html>
