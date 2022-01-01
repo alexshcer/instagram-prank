@@ -18,7 +18,7 @@ setTimeout(function () {
 //emoji
 const emoji = document.querySelector(".emoji");
 var display = document.getElementsByClassName("emoji");
-var emojiList = ["🥳", "🤩", "👾", "😵", "👨‍💻", "🎮", "🖕"];
+var emojiList = ["🥳", "🤩", "👾", "😵", "😑", "🎮", "🖕"];
 var i = 0;
 var timer;
 
